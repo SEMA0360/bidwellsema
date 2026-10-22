@@ -1,0 +1,11 @@
+[functions.analyze-rfp]
+verify_jwt = true
+entrypoint = "./functions/analyze-rfp/index.ts"
+
+[functions.draft-response]
+verify_jwt = true
+entrypoint = "./functions/draft-response/index.ts"
+
+[functions.sam-opportunities]
+verify_jwt = true
+entrypoint = "./functions/sam-opportunities/index.ts"
