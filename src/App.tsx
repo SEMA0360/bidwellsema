@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import type { Session } from '@supabase/supabase-js';
-import { LogOut, LockKeyhole, MoreHorizontal } from 'lucide-react';
+import { LogOut, LockKeyhole, Mail, MoreHorizontal } from 'lucide-react';
 import Uploader from '@/components/Uploader';
 import Dashboard from '@/components/Dashboard';
 import { analyzeFile } from '@/lib/analysis';
@@ -476,7 +476,17 @@ function App() {
             >
               <MoreHorizontal className="h-5 w-5" aria-hidden="true" />
             </summary>
-            <div className="mt-1 min-w-36 rounded border border-ink-700 bg-ink-900 p-1">
+            <div className="mt-1 min-w-52 rounded border border-ink-700 bg-ink-900 p-1">
+              <a
+                className="flex w-full items-start gap-2 rounded px-3 py-2 text-left text-sm text-ink-200 transition-colors hover:bg-ink-800 hover:text-white"
+                href="mailto:alfadsema@gmail.com?subject=Bidwell%20support%20or%20report"
+              >
+                <Mail className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                <span>
+                  <span className="block">Contact support / Report</span>
+                  <span className="mt-0.5 block text-xs text-ink-400">alfadsema@gmail.com</span>
+                </span>
+              </a>
               <button
                 className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm text-ink-200 transition-colors hover:bg-ink-800 hover:text-white"
                 onClick={handleSignOut}
